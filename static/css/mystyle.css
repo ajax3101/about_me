@@ -1,0 +1,67 @@
+.navigation {
+    margin-top: 10px;
+}
+
+.menu {
+    padding: 0;
+    overflow: hidden;
+    list-style-type: none;
+    text-align: center;
+}
+
+.menu-item {
+    display: inline-block; 
+}
+
+.menu-link {
+    display: inline-block;
+    background-color: dimgrey;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.menu-link:hover {
+    background-color: papayawhip;
+    color: black;
+}
+
+.title {
+    padding-left: 10px;
+    font-size: 2.8em;
+    background: dimgrey;
+    color: white;
+}
+
+.subtitle {
+    font-size: 2.2em;
+    color: dimgrey;
+}
+
+.section-title {
+    padding-left: 10px;
+    font-size: 1.8em;
+    color: white;
+    background: dimgrey;
+}
+
+.skill-section {
+    font-size: 1.4em;
+}
+
+.go-top {
+    position: fixed;
+    bottom: 2em;
+    right: 2em;
+    text-decoration: none;
+    color: white;
+    background-color: dimgrey;
+    font-size: 12px;
+    padding: 1em;
+}
+
+.go-top:hover {
+    background-color: papayawhip;
+    color: black
+}

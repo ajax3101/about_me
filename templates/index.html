@@ -1,0 +1,35 @@
+{% extends 'main.html' %}
+{% load staticfiles %}
+{% block title %}Программист Python — {{ name }}{% endblock %}
+{% block content %}
+    <div class="container">
+        <h1 class="title">Общая информация</h1>
+        <h2 class="subtitle">{{ name }} &mdash; Программист Python</h2>
+        <img src="{% static 'img/ajax2.jpg' %}" alt="photo" width="150">
+        <h2 class="subtitle">Привет! Меня зовут {{ name }}. Я&nbsp;всерьез увлекся
+            <nobr>Python</nobr>
+            разработкой и&nbsp;хочу продолжить развиваться в&nbsp;этой области. Успешно закончил курсы верстки,
+            продолжаю узнавать новое и&nbsp;потихоньку верстаю:) Хочу стать частью профессионального коллектива с&nbsp;большими
+            амбициями и&nbsp;хорошим чуством юмора.
+            </h2>
+
+    </div>
+    <br>
+    <div class="container">
+        <div class="one-half column">
+            <h3 id="general" class="section-title">Контактные данные</h3>
+            <p><b>Телефон:</b> {{ tel }}</p>
+            <p><b>E-mail:</b> <a href="mailto:{{ email }}">{{ email }}</a></p>
+            <p><b>LinkedIn:</b> <a href="{{ linkedin }}" target="_blank">Denis Morozov</a></p>
+        </div>
+        <div class="one-half column">
+            <h3 class="section-title">Общая информация</h3>
+            <p><b>Дата рождения:</b> {{ birthday|date }}</p>
+            <p><b>Занятость:</b> полная занятость</p>
+            <p><b>График работы:</b> полный рабочий день</p>
+            <p><b>Переезд:</b> Готов к переезду</p>
+            <p><b>Командировки:</b> Готов к редким командировкам</p>
+        </div>
+    </div>
+{% endblock %} 
+

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% if title %} {{ title }} | {% endif %} Django </title>
+    {% block css %}
+        <link href="https://fonts.googleapis.com/css?family=Cuprum&subset=latin,cyrillic" rel="stylesheet"
+              type="text/css">
+        <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+        <link rel="stylesheet" href="{% static 'css/skeleton.css' %}">
+        <link rel="stylesheet" href="{% static 'css/mystyle.css' %}">
+        <link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.ico' %}">
+    {% endblock %}
+</head>
+
+<body>
+{#<div class="container">#}
+{#    {% if page_header %}#}
+{#        <div class="page-header">#}
+{#        <h1>#}
+{#            {{ page_header }}#}
+{#        </h1>#}
+{#        </div>#}
+{##}
+{#    {% endif %}#}
+{#    </div>#}
+{% block menu %}
+    <div class="container" id="top">
+    <div class="navigation ">
+        <ul class="menu">
+            <li class="menu-item"><a class="menu-link" href="{% url 'main' %}">Общая информация</a></li>
+            <li class="menu-item"><a class="menu-link" href="{% url 'edu' %}">Образование</a></li>
+            <li class="menu-item"><a class="menu-link" href="{% url 'work' %}">Работа</a></li>
+
+        </ul>
+    </div>
+{% endblock %}
+</div>
+{% block content %} {% endblock %}
+<a href="#top" class="go-top">Наверх</a>
+</body>
+
+</html>
